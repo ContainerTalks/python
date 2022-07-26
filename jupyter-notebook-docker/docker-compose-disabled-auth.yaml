@@ -1,0 +1,19 @@
+version:  '3.8'
+services:
+  datascience-notebook:
+    image: jupyter/all-spark-notebook-custom
+    volumes:
+      - jupyter_data:/home/jovyan
+    ports:
+      - 8888:8888
+    container_name: jupyter_notebook
+    command: >
+      start-notebook.sh --NotebookApp.token=''
+      --NotebookApp.open_browser=False
+      --NotebookApp.password=''
+      --NotebookApp.disable_check_xsrf=True
+      --NotebookApp.allow_origin=*
+      --NotebookApp.ip='*'
+      --NotebookApp.base_url='/ws_jupyter'
+volumes:
+    jupyter_data: {}
