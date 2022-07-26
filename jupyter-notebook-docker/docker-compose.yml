@@ -8,9 +8,9 @@ services:
       - 8888:8888
     container_name: jupyter_notebook
     command: >
-      start-notebook.sh  --NotebookApp.token=c101278ab8c9b7b16c8cd25672v44d2ce3968asc8ag1054c44d26 
+      start-notebook.sh  --NotebookApp.token=<TOKEN_VALUE_64_HASHCODE>
       --NotebookApp.open_browser=False
-      --NotebookApp.password=usha1:47181320c866:6b43078659452bb1gs45b9739e421a09755c4a42 
+      --NotebookApp.password=usha1:<PASSWORD_SHA>
       --NotebookApp.ip=*"
     user: root
     environment:
